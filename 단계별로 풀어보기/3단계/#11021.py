@@ -2,11 +2,7 @@
 
 #https://www.acmicpc.net/problem/11021
 
-import sys
-
-read = sys.stdin.readline
-
-n = int(read())
+n = int(input())
 for i in range(n):
     a, b = map(int, input().split())
-    print("Case #", int(i+1), ": ", int(a+b))
+    print("Case #",int(i+1),": ",int(a+b))
