@@ -5,4 +5,4 @@
 n = int(input())
 for i in range(n):
     a, b = map(int, input().split())
-    print("Case #", n+1, ": ", a+b)
+    print("Case #", i+1, ": ", a+b)
