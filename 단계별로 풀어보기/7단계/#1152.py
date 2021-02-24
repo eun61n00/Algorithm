@@ -1,1 +1,5 @@
-
+s = input()
+s = s.rstrip()
+s = s.lstrip()
+words_count = s.count(" ")
+print(words_count + 1)
