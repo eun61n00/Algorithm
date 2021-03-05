@@ -1,12 +1,18 @@
-n = int(input())
-word_list = []
-for i in range(n):
+num = int(input())
+cnt = 0
+
+for i in range(num):
     word = input()
-    word_list.append(word)
-
-for i in range(len(word_list)):
-    while j in word_list[i]:
-        word_list = word_list.replace(j, "", 1)
-
-def count_group_word(list):
-    return sum(list)
+    word = list(word)
+    for j in range(len(word)):
+        checking_char = word[0]
+        del word[0]
+        if len(word) == 0:
+            break
+        if checking_char in word:
+            if checking_char != word[0]:
+                cnt += 1
+                break
+            else: #checking_cahr == word[0]
+                continue
+print(num-cnt)
