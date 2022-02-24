@@ -1,103 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int *arr, int i, int j){
-	int tmp;
+void merge(int *num_arr, int left, int mid, int right){
+    int i, j, k;
+    i = left;
+    j = mid + 1;
+    k = 0;
+    int *sorted = (int *)malloc(sizeof(int) * (right - left + 1));
+    
+    while(i<= mid && j<=right){
+        if (num_arr[i] <= num_arr[j])
+            sorted[k++] = num_arr[i++];
+        else
+            sorted[k++] = num_arr[j++];
+    }
 
-	tmp = arr[i];
-	arr[i] = arr[j];
-	arr[j] = tmp;
+    while (i <= mid)
+        sorted[k++] = num_arr[i++];
+
+    while (j <= right)
+        sorted[k++] = num_arr[j++];
+
+    k = 0;
+    for (int a = left; a <= right; a++) {
+        num_arr[a] = sorted[k++];
+    }
 }
 
-void selection_sort(int *num_arr, int arr_len){
-	int min_idx;
+void merge_sort(int *num_arr, int left, int right){
 
-	for (int idx = 0; idx < arr_len; idx++)
-	{
-		min_idx = idx;
-		for (int i = idx; i < arr_len; i++)
-		{
-			if (num_arr[i] <= num_arr[min_idx])
-				min_idx = i;
-		}
-		swap(num_arr, idx, min_idx);
-	}
+    int mid;
+
+    if (left < right) {
+        mid = (left + right) / 2;
+        merge_sort(num_arr, left, mid);
+        merge_sort(num_arr, mid+1, right);
+        merge(num_arr, left, mid, right);
+    }
 }
-
-void bubble_sort(int *num_arr, int arr_len){
-	int j;
-	while (arr_len > 0)
-	{
-		j = 0;
-		while (j < arr_len - 1)
-		{
-			if (num_arr[j] > num_arr[j + 1])
-				swap(num_arr, j, j+1);
-			j++;
-		}
-		arr_len--;
-	}
-}
-
-void insertion_sort(int *num_arr, int arr_len){
-
-	int i, j, key;
-
-	if (arr_len == 1)
-		return;
-
-	for (i = 1; i <= arr_len; i++){
-		key = num_arr[i];
-		for (j = i-1; j >= 0 && num_arr[j]>key; j--){
-			num_arr[j + 1] = num_arr[j];
-		}
-		num_arr[j + 1] = key;
-	}
-}
-
-void quick_sort(int *num_arr, int L, int R){
-	int left = L, right = R;
-	int pivot = num_arr[(L + R) / 2];
-	int tmp;
-
-	while (left <= right)
-	{
-		while (num_arr[left] < pivot)
-			left++;
-		while (num_arr[right] > pivot)
-			right--;
-		if (left <= right)
-		{
-			swap(num_arr, left, right);
-			left++;
-			right--;
-		}
-		if (L < right)
-			quick_sort(num_arr, L, right);
-		if (left < R)
-			quick_sort(num_arr, left, R);
-	}
-}
-
-void merge_sort(int *num_arr){
-
-}
-
 
 int main() {
-	int n = 10;
-	int num_arr[10] = {7,3,1,6,9,4,2,5,8,0};
-	//scanf("%d", &n);
-	//int *num_arr= (int *)malloc(sizeof(int) * n);
-
-	//for (int i = 0; i < n; i++)
-	//	scanf("%d", &num_arr[i]);
-	
-	//selection_sort(num_arr, n);
-	insertion_sort(num_arr, n);
-	//bubble_sort(num_arr, n);
-	//quick_sort(num_arr, 0, n-1);
+    int n;
+	scanf("%d", &n);
+	int *num_arr= (int *)malloc(sizeof(int) * n);
 
 	for (int i = 0; i < n; i++)
-		printf("%d ", num_arr[i]);
+		scanf("%d", &num_arr[i]);
+	
+	merge_sort(num_arr, 0, n-1);
+
+	for (int i = 0; i < n; i++)
+		printf("%d\n", num_arr[i]);
 }
