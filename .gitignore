@@ -2,4 +2,6 @@
 /.rtf
 /.dSYM
 /.vscode
-/.out
+*.out
+/.idea
+*.DS_Store
