@@ -27,7 +27,7 @@ for _ in range(m):
 	graph[u].append((v, w))
 
 # 방문하지 않은 노드 중에서, 가장 최단 거리가 짧은 노드의 번호를 반환
-def get_smallest_node():
+def get_closest_node():
 	min_value = INF
 	index = 0 									# 가장 최단 거리가 짧은 노드(index)
 	for i in range(1, n + 1):
@@ -45,7 +45,7 @@ def dijkstra(start):
 	# 시작 노드를 제외한 전체 n-1개의 노드에 대해 반복
 	for i in range(n-1):
 		# 현재 최단 거리가 가장 짧은 노드에 방문
-		now = get_smallest_node()
+		now = get_closest_node()
 		visited[now] = True
 		# 현재 노드와 연결된 다른 노드 확인
 		for j in graph[now]:
