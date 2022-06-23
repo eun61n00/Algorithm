@@ -30,7 +30,12 @@ def dijkstra(start):
 
 	return distance
 
+to_x = [int(1e9)]
+from_x = dijkstra(x)
+for i in range(1, n + 1):
+	if i == x:
+		to_x.append(0)
+		continue
+	to_x.append(dijkstra(i)[x])
 
-from = dijkstra(x)
-print(distance)
-print(max(distance[1:]))
+print(max([a + b for a, b in zip(to_x[1:], from_x[1:])]))
