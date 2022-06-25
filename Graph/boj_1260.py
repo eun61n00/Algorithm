@@ -1,4 +1,4 @@
-# boj_1260
+# boj_1260) DFS와 BFS
 # https://www.acmicpc.net/problem/1260
 
 import sys
@@ -6,41 +6,45 @@ from collections import deque
 
 n, m, start = map(int, sys.stdin.readline().split())
 
-def dfs(graph, v, visited, dfs_result):
+def dfs(graph, v, visited, dfs_res):
 	visited[v] = True
-	dfs_result.append(v)
+	dfs_res.append(v)
 
 	for i in graph[v]:
 		if not visited[i]:
-			dfs(graph, i, visited, dfs_result)
+			dfs(graph, i, visited, dfs_res)
 
 
 def bfs(graph, v, visited):
 	queue = deque([start])
 	visited[start] = True
+	bfs_res = []
 
 	while queue:
 		v = queue.popleft()
-		bfs_result.append(v)
+		bfs_res.append(v)
 
 		for i in graph[v]:
 			if not visited[i]:
 				queue.append(i)
+				visited[i] = True
+	return bfs_res
+
 
 graph = [[] for _ in range(n + 1)]
-for _ in range(n):
+for _ in range(m):
 	a, b = map(int, sys.stdin.readline().split())
 	graph[a].append(b)
 	graph[b].append(a)
 
-visited = [False] * (n + 1)
-dfs_result = []
+for edge in graph:
+	edge = edge.sort()
 
 visited = [False] * (n + 1)
-bfs_result = []
+dfs_res = []
+dfs(graph, start, visited, dfs_res)
+print(' '.join(str(i) for i in dfs_res))
 
-dfs(graph, start, visited, dfs_result)
-bfs(graph, start, visited)
-
-print(" ".join(str(x) for x in dfs_result))
-print(" ".join(str(x) for x in bfs_result))
+visited = [False] * (n + 1)
+bfs_res = bfs(graph, start, visited)
+print(' '.join(str(i) for i in bfs_res))
