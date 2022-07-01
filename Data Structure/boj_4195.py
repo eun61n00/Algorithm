@@ -7,6 +7,10 @@ input = sys.stdin.readline
 test_case = int(input())
 
 def find(x):
+	if x != parent[x]:
+		parent[x] = find(parent[x])
+		return parent[x]
+	return parent[x]
 
 
 def union(x, y):
@@ -15,11 +19,7 @@ def union(x, y):
 	if x != y:
 		parent[y] = x
 		network_size[x] += network_size[y]
-	# if x > y:
-	# 	parent[x] = y
-	# 	network_size[x] += network_size[y]
-	# else:
-	# 	parent[y] = x
+
 
 for _ in range(test_case):
 	parent = dict()

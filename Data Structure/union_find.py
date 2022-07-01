@@ -2,10 +2,15 @@
 # Union Find Algorithm
 
 
+def init(n):
+	parent = [i for i in range(n)]
+	return parent
+
 def find(x):
-    if parent[x] != x:
-        return find(parent[x])
-    return x
+	if x != parent[x]:
+		parent[x] = find(parent[x])
+		return parent[x]
+	return x
 
 def union(x, y):
 	x = find(x)
@@ -16,11 +21,10 @@ def union(x, y):
 	else:
 		parent[y] = x
 
-parent = []
-for i in range(5):
-	parent.append(i)
+parent = init(10)
 
-union(1, 4)
-union(4, 2)
+union(1, 2)
+union(2, 3)
+union(3, 4)
 
 print(parent)

@@ -4,30 +4,39 @@
 import sys
 input = sys.stdin.readline
 
+def z_solve(n, x, y):
+	global num
+	if n == 2:
+		if x == r and y == c :
+			print(num)
+			return
+		num += 1
+		if x == r and y + 1 == c:
+			print(num)
+			return
+		num += 1
+		if x + 1 == r and y == c:
+			print(num)
+			return
+		num += 1
+		if x + 1 == r and y + 1 == c:
+			print(num)
+			return
+		num += 1
+		return
+	if r < n/2 and c <= n/2:
+		z_solve(n/2, x, y)
+	num += (n/2)*4
+	if r >= n/2 and  c <= n/2:
+		z_solve(n/2, x + (n / 2), y)
+	num += (n/2)*4
+	if r < n/2 and c >= n/2:
+		z_solve(n/2, x, y + (n / 2))
+	num += (n/2)*4
+	if r >= n/2 and c >= n/2:
+		z_solve(n/2,  x + (n / 2), y + (n / 2))
+	num += (n/2)*4
+
 n, r, c = map(int, input().split())
-arr = [[0] * (2 ** n)] * (2 ** n)
-
 num = 0
-
-def z(array, num):
-	if len(array) < 3:
-		array[0][0] = num
-		num += 1
-		array[0][1] = num
-		num += 1
-		array[1][0] = num
-		num += 1
-		array[1][1] = num
-		num += 1
-		return num, array
-
-	mid = int(len(array) // 2)
-	arr_1, arr_2, arr_3, arr_4 = [line[:mid] for line in array[:mid]], [row[:mid] for row in array[mid:]], \
-			[row[mid:] for row in array[:mid]], [row[mid:] for row in array[mid:]]
-	num, arr_1  = z(arr_1, num)
-	num, arr_2  = z(arr_2, num)
-	num, arr_3  = z(arr_3, num)
-	num, arr_4  = z(arr_4, num)
-	return num, arr_1 + arr_2 + arr_3 + arr_4
-z(arr, num)
-print(arr)
+z_solve(2 ** n, 0, 0)
