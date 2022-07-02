@@ -1,6 +1,6 @@
 /.ipynb_checkpoints
 /.rtf
-/.dSYM
+a.out.dSYM/
 /.vscode
 *.out
 /.idea
