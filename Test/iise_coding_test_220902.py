@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # 산업공학과 코딩대회 2022년 9월 2일
 
-# #1
 def solution1(v):
 
 	result = []
