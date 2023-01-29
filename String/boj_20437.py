@@ -1,5 +1,6 @@
 # !usr/bin/env python
 # -*- coding: utf-8 -*-
+# boj 20437 문자열게임2
 
 import sys
 from collections import defaultdict

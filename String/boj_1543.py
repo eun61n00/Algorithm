@@ -1,5 +1,7 @@
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 # boj 1743 문서 검색
+# https://eunbin00.tistory.com/143
 
 import sys
 

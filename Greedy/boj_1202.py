@@ -8,34 +8,22 @@ import heapq
 input = sys.stdin.readline
 
 n, k = map(int, input().split())
-jewelries = []
-bags = []
-result = []
 
-for _ in range(n):
-    m, v = map(int, input().split())
-    heapq.heappush(jewelries, (m, v))
+jewelries = [tuple(map(int, input().split())) for _ in range(n)]
+bags = [int(input()) for _ in range(k)]
 
-for _ in range(k):
-    heapq.heappush(bags, int(input()))
+jewelries.sort()
+bags.sort()
 
-result = [(0, 0) for _ in range(len(bags))]
+tmp = []
+result = 0
 
-print(jewelries)
+for bag in bags:
+    while jewelries and jewelries[0][0] <= bag:
+        heapq.heappush(tmp, -jewelries[0][-1])
+        heapq.heappop(jewelries)
 
-for i in range(len(bags)):
-    for m, v in jewelries:
-        if m <= bags[i]:
-            if v > result[i][1]:
-                tmp = (result[i])
-                result[i] = (m, v)
-                heapq.heappop(jewelries)
-                if tmp[0] != 0:
-                    heapq.heappush(jewelries, tmp)
-        else:
-            break
-        print("\t", result)
+    if tmp:
+        result -= heapq.heappop(tmp)
 
 print(result)
-
-print(sum([v for m, v in result]))

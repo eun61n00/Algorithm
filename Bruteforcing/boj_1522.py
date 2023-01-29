@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#boj 1522 문자열 교환
 
 import sys
 
