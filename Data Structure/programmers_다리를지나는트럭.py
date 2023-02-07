@@ -80,3 +80,27 @@ def solution2(bridge_length, weight, truck_weights):
 		count += 1
 
 	return count
+
+
+from collections import deque
+
+def solution3(bridge_length, max_weight, truck_weights):
+
+    answer = 0
+    on_bridge = [0 for _ in range(bridge_length)]
+
+    while truck_weights:
+        # 트럭 내리기
+        answer += 1
+        on_bridge.pop(0)
+
+        # 가능한 경우에 트럭 올리기
+        if sum(on_bridge) + truck_weights[0] <= max_weight:
+            on_bridge.append(truck_weights.pop(0))
+        else:
+            on_bridge.append(0)
+
+    # 남은 트럭 내리기
+    answer += len(on_bridge)
+
+    return answer
