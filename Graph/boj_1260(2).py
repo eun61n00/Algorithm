@@ -15,7 +15,8 @@ for _ in range(m):
     graph[n1].append(n2)
     graph[n2].append(n1)
 
-visited = [False for _ in range(n + 1)]
+for edge in graph:
+    edge = edge.sort()
 
 def dfs(graph, v, visited):
     if visited[v] == False:
@@ -24,13 +25,19 @@ def dfs(graph, v, visited):
         for i in graph[v]:
             dfs(graph, i, visited)
 
-def bfs(graph, v, visited):
-    queue = deque()
-    visited[v] = True
-    queue.append(*graph[v])
+def bfs(graph, start, visited):
+    queue = deque([start])
+    visited[start] = True
     while queue:
-        node = queue.popleft()
-        print(node, end=' ')
-        if visited[v] =
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
 
+visited = [False for _ in range(n + 1)]
 dfs(graph, v, visited)
+print("")
+visited = [False for _ in range(n + 1)]
+bfs(graph, v, visited)
