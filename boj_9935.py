@@ -7,32 +7,19 @@ from collections import defaultdict
 from collections import deque
 
 input = sys.stdin.readline
+str = deque(list((input().strip())))
+stack = []
+bomb = list(input().strip())
+check = True
 
-str = deque(list(input().strip()))
-bomb = input().strip()
+while str:
+    ch = str.popleft()
+    stack.append(ch)
+    if ch == bomb[-1] and stack[-len(bomb):] == bomb:
+        for i in range(len(bomb)):
+            stack.pop()
 
-str_dict = defaultdict(list)
-
-for i, ch in enumerate(str):
-    str_dict[i].append(ch)
-
-while bomb in str:
-    remove = ""
-    for i in range(len(str)):
-        ch = str.popleft()
-        if ch == bomb[0]:
-            remove += ch
-            if remove == bomb:
-
-        else:
-            str.append(ch)
-
-
-    for i in range(len(str) - len(bomb) + 1):
-        if str[i : i+len(bomb)] == bomb:
-            str = str[0:i] + str[i+len(bomb):]
-
-if not str:
+if not stack:
     print("FRULA")
 else:
-    print(str)
+    print(''.join(stack))
