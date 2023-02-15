@@ -11,22 +11,30 @@ graph = []
 for i in range(n):
     graph.append(list(map(int, input().split())))
 
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
 def dfs(x, y):
-    if x <= -1 or x >= n or y <= -1 or y >= m:
-        return False
-    if graph[x][y] == 0:
-        graph[x][y] = 1
-        dfs(x - 1, y)
-        dfs(x + 1, y)
-        dfs(x, y - 1)
-        dfs(x, y + 1)
-        return True
-    return False
+    graph[x][y] = 1 # 방문 처리
+
+    # 상하좌우 이동
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+
+        # 맵을 벗어나면 continue
+        if nx < 0 or ny < 0 or nx > n - 1 or ny > m - 1:
+            continue
+
+        if graph[nx][ny] == 0:
+            dfs(nx, ny)
 
 result = 0
 for i in range(n):
     for j in range(m):
-        if dfs(i, j) == True:
+        # 뚫려 있으면 음료수 한 칸이라도 부을 수 있음
+        if graph[i][j] == 0:
+            dfs(i, j)
             result += 1
 
 print(result)
