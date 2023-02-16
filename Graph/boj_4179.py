@@ -9,9 +9,11 @@ graph = []
 for i in range(r):
     graph.append(list(input().strip()))
 
+loc_f = (-1, -1)
 for i in range(r):
     for j in range(c):
         if graph[i][j] == 'J':
+            graph[i][j] = 0
             loc_j = (i, j)
         elif graph[i][j] == 'F':
             graph[i][j] = 1
@@ -21,44 +23,41 @@ dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 def bfs(j, f):
-    result = 0
     queue_j = deque([j])
     queue_f = deque([f])
+    if f == (-1, -1):
+        queue_f = None
 
-    # J가 맵을 빠져나갈 때까지
     while queue_j:
-        j_x, j_y = queue_j.popleft()
+        x_j, y_j = queue_j.popleft()
+
+        # 매 분마다 확산하는 불의 위치를 담을 리스트
+        fire_list = []
 
         for i in range(4):
+            nx_j = x_j + dx[i]
+            ny_j = y_j + dy[i]
 
-            j_nx = j_x + dx[i]
-            j_ny = j_y + dy[i]
+            if nx_j < 0 or ny_j < 0 or nx_j > r - 1 or ny_j > c - 1:
+                return graph[x_j][y_j] + 1
 
-            if j_nx < 0 or j_ny < 0 or j_nx > r - 1 or j_ny > c - 1:
-                result += 1
-                return result
+            if graph[nx_j][ny_j] == '.':
+                graph[nx_j][ny_j] = graph[x_j][y_j] + 1
+                queue_j.append((nx_j, ny_j))
 
-            if graph[j_nx][j_ny] == '.':
-                graph[j_nx][j_ny] = 'J'
-                graph[j_x][j_y] = '.'
-                queue_j.append((j_nx, j_ny))
-                result += 1
-
-        # 이전에 확산된 불을 모두 4방향으로 확산시켜야 함
-        cur_fire_value = graph[queue_f[0][0]][queue_f[0][1]]
-        while graph[queue_f[0][0]][queue_f[0][1]] == cur_fire_value:
-            f_x, f_y = queue_f.popleft()
-
+        while queue_f:
+            x_f, y_f = queue_f.popleft()
             for i in range(4):
-                f_nx = f_x + dx[i]
-                f_ny = f_y + dy[i]
+                nx_f = x_f + dx[i]
+                ny_f = y_f + dy[i]
 
-                if f_nx < 0 or f_ny < 0 or f_nx > r - 1 or f_ny > c - 1:
+                if nx_f < 0 or ny_f < 0 or nx_f > r - 1 or ny_f > c - 1:
                     continue
+                if graph[nx_f][ny_f] != '#':
+                    graph[nx_f][ny_f] = 'F'
+                    fire_list.append((nx_f, ny_f))
 
-                if graph[f_nx][f_ny] != '#':
-                    graph[f_nx][f_ny] = graph[f_x][f_y] + 1
-                    queue_f.append((f_nx, f_ny))
+        queue_f = deque(fire_list)
 
     return "IMPOSSIBLE"
 

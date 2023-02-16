@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 # boj 1062 가르침
 
+# ! 단어 개수 50개 이하, 알파벳 26개
+
 import sys
 from itertools import combinations
+from copy import deepcopy
 
 input = sys.stdin.readline
 
@@ -12,17 +15,34 @@ words = []
 for i in range(n):
     words.append(input().rstrip()[4:-4])
 
-learned = ['a', 'n', 't', 'i', 'c']
-alphabets = [chr(97 + i) for i in range(26)]
-
+def readable(word, alphabets):
+    for c in word:
+        if not alphabets[ord(c) - ord('a')]:
+            return 0
+    return 1
 
 result = 0
-if k < 5:
-    result = 0
+cnt = k - 5
+if cnt < 0:
+    print(0)
     exit(0)
 
-for i in range(len(words)):
-    for ch in learned:
-        words[i].replace(ch, '')
+combinations = combinations([chr(i) for i in range(97, 97+26) if chr(i) not in "antic"], cnt)
 
-cnt = k - 5
+result = 0
+for combination in combinations:
+    cnt = 0
+    alphabets = [1 if chr(i + 97) in "antic" else 0 for i in range(26)]
+    for c in combination:
+        alphabets[ord(c) - ord('a')] = 1
+    for word in words:
+        cnt += readable(word, alphabets)
+
+        # * 읽을 수 있는지 확인(비트 연산)
+        for ch in word:
+
+
+    if cnt > result:
+        result = cnt
+
+print(result)
