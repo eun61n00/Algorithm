@@ -25,7 +25,7 @@ else:
         for i in range(n):
             if position[i] - installed >= mid:
                 count += 1
-                installed = position[i]    # 공유기 설치
+                installed = position[i]    # 공유기 설치 (bisect 모듈 사용 가능)
         if count >= c:
             result = mid
             start = mid + 1     # 간격 늘리기

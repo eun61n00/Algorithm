@@ -9,7 +9,7 @@ input = sys.stdin.readline
 n, c = map(int, input().split())
 obj = list(map(int, input().split()))
 left, right = obj[:n//2], obj[n//2:]
-sum_combination_left, sum_combination_right = [0], [0]
+sum_combination_left, sum_combination_right = [], []
 
 if n == 1 and obj[0] <= c:
     print(2)
@@ -18,15 +18,15 @@ if n == 1 and obj[0] > c:
     print(1)
     exit()
 
-for i in range(1, len(left) + 1):
+for i in range(0, len(left) + 1):
     for sub in combinations(left, i):
         sum_combination_left.append(sum(sub))
 sum_combination_left.sort()
 
-for i in range(1, len(right) + 1):
+for i in range(0, len(right) + 1):
     for sub in combinations(right, i):
         sum_combination_right.append(sum(sub))
-sum_combination_right.sort()
+# sum_combination_right.sort() # 정렬할 필요 없음
 
 answer = 0
 
