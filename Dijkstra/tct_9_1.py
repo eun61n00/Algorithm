@@ -3,7 +3,7 @@
 
 import sys
 input = sys.stdin.readline
-INF = int(1e9)									# 무한을의미하는 값으로 10억을 설정
+INF = int(1e9)									# 무한을 의미하는 값으로 10억을 설정
 
 # 노드의 개수, 간선의 개수 입력받기
 n, m = map(int, input().split())
@@ -55,7 +55,7 @@ def dijkstra(start):
 				distance[j[0]] = cost
 
 # 다익스트라 알고리즘 수행
-dijkstra()
+dijkstra(start)
 
 # 모든 노드로 가기 위한 최단 거리 출력
 for i in range(1, n + 1):
