@@ -39,7 +39,6 @@ def can_visit(val, key_list):
 def bfs(x, y, graph):
     cnt = 0
     queue = deque([(x, y)])
-    visited = [[False for _ in range(w)] for _ in range(h)]
     visited[x][y] = True
 
     dx = [-1, 1, 0, 0]
@@ -61,18 +60,18 @@ def bfs(x, y, graph):
                     visited[nx][ny] = True
                 elif graph[nx][ny] == '$':
                     queue.append((nx, ny))
-                    visited[nx][ny] = True
                     graph[nx][ny] = '.'
                     cnt += 1
                 elif ord('a') <= ord(graph[nx][ny]) <= ord('z'):
                     queue.append((nx, ny))
-                    visited[nx][ny] = True
                     key_list.append(graph[nx][ny])
                     graph[nx][ny] = '.'
-                elif ord('A') <= ord(graph[nx][ny]) <= ord('Z') and graph[nx][ny].lower() in key_list:
-                    queue.append((nx, ny))
-                    visited[nx][ny] = True
-                    graph[nx][ny] = '.'
+                elif ord('A') <= ord(graph[nx][ny]) <= ord('Z'):
+                    if graph[nx][ny].lower() in key_list:
+                        queue.append((nx, ny))
+                        graph[nx][ny] = '.'
+                    else:
+                        start_points.append((nx, ny))
                 else:
                     continue
 
@@ -80,12 +79,15 @@ def bfs(x, y, graph):
 
 test_case = int(input().rstrip())
 for _ in range(test_case):
+
+    # 입력 받기
     h, w = map(int, input().split())
     board = [list(input().rstrip()) for _ in range(h)]
     key_list = list(input().rstrip())
     if key_list == [0]:
         key_list = []
 
+    # starting point 저장하기 (O(n))
     start_points= []
     for idx, val in enumerate(board[0]):
         if can_visit(val, key_list):
@@ -101,10 +103,8 @@ for _ in range(test_case):
 
     # start_point를 왔다갔다 -> board에 더이상 변화가 없을 때까지
     answer = 0
-    while True:
-        board_copy = deepcopy(board)
-        for x, y in start_points:
-            answer += bfs(x, y, board)
-        if board == board_copy:
-            break
+    visited = [[False for _ in range(w)] for _ in range(h)]
+    while start_points:
+        x, y = start_points.pop(0)
+        answer += bfs(x, y, board)
     print(answer)
