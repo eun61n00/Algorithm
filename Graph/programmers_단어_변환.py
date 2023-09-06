@@ -4,6 +4,7 @@
 
 from collections import deque
 
+
 def solution(begin, target, words):
     answer = []
 
@@ -46,3 +47,40 @@ def solution(begin, target, words):
     if min(answer) == None:
         return 0
     return min(answer)
+
+
+def solution(begin, target, words):
+    answer = 0
+    graph = [[] for _ in range(len(words))]
+    visited = [False] * len(words)
+
+    if target not in words:
+        return 0
+
+    # 그래프 만들기
+    for i, word1 in enumerate(words):
+        for j, word2 in enumerate(words):
+            if i == j:
+                continue
+            if len([ch for idx, ch in enumerate(word1) if word2[idx] != ch]) == 1:
+                graph[i].append(j)
+
+    queue = deque([])
+
+    for i, word in enumerate(words):
+        if len([ch for idx, ch in enumerate(begin) if word[idx] != ch]) == 1:
+            queue.append((i, 0))
+
+    while queue:
+        idx, step = queue.popleft()
+        print(queue, step)
+        if words[idx] == target:
+            break
+        step += 1
+        for j in graph[idx]:
+            print(words[j])
+            if not visited[j]:
+                queue.append((j, step))
+                visited[j] = True
+
+    return step + 1
