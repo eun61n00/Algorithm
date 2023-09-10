@@ -9,7 +9,7 @@ def solution(rectangles, characterX, characterY, itemX, itemY):
     answer = 0
     routes = []
 
-    field = [[-1] * 20 for _ in range(20)]
+    field = [[-1] * 102 for _ in range(102)]
 
     for rectangle in rectangles:
         x1, y1, x2, y2 = map(lambda x: x * 2, rectangle)
@@ -38,9 +38,6 @@ def solution(rectangles, characterX, characterY, itemX, itemY):
                 queue.append((nx, ny))
                 visited[nx][ny] = True
                 field[nx][ny] = field[x][y] + 1
-
-    for i in range(20):
-        print(field[i])
 
     return field[itemX * 2][itemY * 2] // 2
 
