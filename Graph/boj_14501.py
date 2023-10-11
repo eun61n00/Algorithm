@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-# boj 14501 얻을 수 있는 최대 수익
+# boj 14501 퇴사
 
 import sys
 from collections import deque
