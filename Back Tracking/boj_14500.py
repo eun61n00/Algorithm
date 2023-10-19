@@ -24,11 +24,58 @@ for i in range(n):
             start.append((i, j))
 
 
-def dfs(board, y, x, visited, values):
+def dfs(board, y, x, visited, values, lst):
+    global answer
+
     if len(values) == 4:
-        global answer
         answer = max(answer, sum(values))
         return
+
+    if len(values) == 3 and lst[0][0] == lst[1][0] == lst[2][0]:
+        ny, nx = lst[1][0] + 1, lst[1][1]
+        if not (ny < 0 or nx < 0 or ny > n - 1 or nx > m - 1) and not visited[ny][nx]:
+            visited[ny][nx] = True
+            values.append(board[ny][nx])
+            lst.append((ny, nx))
+            print(lst)
+            dfs(board, ny, nx, visited, values, lst)
+            visited[ny][nx] = False
+            values.pop()
+            lst.pop()
+
+        ny, nx = lst[1][0] - 1, lst[1][1]
+        if not (ny < 0 or nx < 0 or ny > n - 1 or nx > m - 1) and not visited[ny][nx]:
+            visited[ny][nx] = True
+            values.append(board[ny][nx])
+            lst.append((ny, nx))
+            print(lst)
+            dfs(board, ny, nx, visited, values, lst)
+            visited[ny][nx] = False
+            values.pop()
+            lst.pop()
+
+    elif len(values) == 3 and lst[0][1] == lst[1][1] == lst[2][1]:
+        ny, nx = lst[1][0], lst[1][1] + 1
+        if not (ny < 0 or nx < 0 or ny > n - 1 or nx > m - 1) and not visited[ny][nx]:
+            visited[ny][nx] = True
+            values.append(board[ny][nx])
+            lst.append((ny, nx))
+            print(lst)
+            dfs(board, ny, nx, visited, values, lst)
+            visited[ny][nx] = False
+            values.pop()
+            lst.pop()
+
+        ny, nx = lst[1][0], lst[1][1] - 1
+        if not (ny < 0 or nx < 0 or ny > n - 1 or nx > m - 1) and not visited[ny][nx]:
+            visited[ny][nx] = True
+            values.append(board[ny][nx])
+            lst.append((ny, nx))
+            print(lst)
+            dfs(board, ny, nx, visited, values, lst)
+            visited[ny][nx] = False
+            values.pop()
+            lst.pop()
 
     for i in range(4):
         ny, nx = y + dy[i], x + dx[i]
@@ -37,9 +84,11 @@ def dfs(board, y, x, visited, values):
         if not visited[ny][nx]:
             visited[ny][nx] = True
             values.append(board[ny][nx])
-            dfs(board, ny, nx, visited, values)
+            lst.append((ny, nx))
+            dfs(board, ny, nx, visited, values, lst)
             visited[ny][nx] = False
             values.pop()
+            lst.pop()
 
 
 answer = 0
@@ -47,6 +96,9 @@ for s in start:
     y, x = s
     visited = [[False] * m for _ in range(n)]
     visited[y][x] = True
-    dfs(board, y, x, visited, [board[y][x]])
+    dfs(board, y, x, visited, [board[y][x]], [(y, x)])
 
 print(answer)
+
+shape = [[[1, 1, 1], [0, 1, 0]], [[0, 1, 0], [1, 1, 1]],
+         [[1, 0], [1, 1], [1, 0]], [[0, 1], [1, 1], [0, 1]]]
