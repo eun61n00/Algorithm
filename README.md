@@ -1,3 +1,4 @@
 # Algorithm Studying
-📚Materials and Code for studying backjoon studying<br>
-[BOJ](https://www.acmicpc.net/user/eun61n)
+
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/generate_badge?boj=eun61n)](https://solved.ac/eun61n)
