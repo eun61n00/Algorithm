@@ -11,19 +11,22 @@ num_list.sort()
 sequences = []
 
 
-def backtracking(sequence):
+def backtracking(sequence, visited):
     global sequences
     if len(sequence) == m:
         print(*sequence)
         return
 
-    lst = []
     for i in range(n):
-        if num_list[i] not in lst and num_list[i] not in sequence:
-            lst.append(num_list[i])
+        if not visited[num_list[i]]:  # 자식 노드들을 생성할 때 같은 자식이 생기지 않도록 검사
             sequence.append(num_list[i])
-            backtracking(sequence)
+            visited[num_list[i]] = True
+            backtracking(sequence, visited)
             sequence.pop()
+            visited[i] = False
 
 
-backtracking([])
+for num in sorted(list(set(num_list))):
+    visited = [False] * 10001
+    visited[num] = True
+    backtracking([num], visited)
