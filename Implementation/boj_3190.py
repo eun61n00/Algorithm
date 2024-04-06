@@ -34,7 +34,6 @@ while True:
     if board[ny][nx] == 0:  # 길이를 늘리지 않고 이동
         l = len(queue)
         for _ in range(l):
-            # while queue:
             by, bx = queue.popleft()  # 이어진 몸이 있는지 확인
             board[y][x] = board[by][bx]
             queue.append((y, x))
