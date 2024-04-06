@@ -103,3 +103,6 @@ def solution(game_board, table):
                     break
 
     return answer
+
+
+solution(game_board, table)
