@@ -1,3 +1,7 @@
+# !/usr/bin/env pyhton
+# -*- coding: utf-8 -*-
+# programmer 뒤에 있는 큰 수 찾기
+
 def solution(numbers):
     answer = [0] * len(numbers)
     stack = []

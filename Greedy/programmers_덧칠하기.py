@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-# boj 1976 여행가자
+# programmers 덧칠하기
 
 def solution(n, m, section):
     answer = 0

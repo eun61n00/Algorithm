@@ -1,3 +1,7 @@
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
+# programmer 미로 탈출
+
 from collections import deque
 from copy import deepcopy
 
