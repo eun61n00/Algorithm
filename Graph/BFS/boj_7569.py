@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-# boj 7576 토마토
+# boj 7569 토마토
 
 import sys
 from collections import deque
