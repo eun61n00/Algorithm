@@ -3,20 +3,31 @@
 # boj 1780 종이의 개수
 
 def recursion(paper):
-    global answer
+    global cnt_zero, cnt_one, cnt_minus
     n = len(paper)
-    if n == 1:
-        answer += 1
-        return
     same = True
     first_element = paper[0][0]
+    if n == 1:
+        if first_element == 0:
+            cnt_zero += 1
+        elif first_element == 1:
+            cnt_one += 1
+        else:
+            cnt_minus += 1
+        return
+
     for i in range(n):
         for j in range(n):
             if paper[i][j] != first_element:
                 same = False
                 break
     if same == True:
-        answer += 1
+        if first_element == 0:
+            cnt_zero += 1
+        elif first_element == 1:
+            cnt_one += 1
+        else:
+            cnt_minus += 1
         return
     else:
         recursion([paper[i][0:n//3] for i in range(0, n//3)])
@@ -31,7 +42,9 @@ def recursion(paper):
 
 
 N = int(input())
-answer = 0
+cnt_zero, cnt_one, cnt_minus = 0, 0, 0
 paper = [list(map(int, input().split())) for _ in range(N)]
 recursion(paper)
-print(answer)
+print(cnt_minus)
+print(cnt_zero)
+print(cnt_one)
