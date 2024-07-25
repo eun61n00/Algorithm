@@ -1,37 +1,50 @@
-# !/usr/bin/env python
+# !/usr/bin/python
 # -*- coding: utf-8 -*-
-# boj 행렬제곱
+# boj 10830 행렬제곱
 
 import sys
 
 input = sys.stdin.readline
-n, b = map(int, input().split())
 
-matrix = [list(map(int, input().split())) for _ in range(n)]
-squared_matrix = [[0 for _ in range(len(matrix))] for _ in range(len(matrix))]
-stored_matrix = [[0 for _ in range(len(matrix))] for _ in range(len(matrix))]
 
-# 제곱할 column 저장하기
-column = []
-for i in range(len(matrix)):
-    column.append([row[i] for row in matrix])
+def multiply_matrix(A, B):
+    """
+    두 행렬 A, B를 곱하는 함수
+    """
+    n = len(A)
+    result = [[0] * n for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            result[i][j] = sum(
+                [(a * b) for a, b in zip(A[i], [b[j] for b in B])]) % 1000
+    return result
 
-# 행렬 곱 구현하기
-while b:
-    for i, row in enumerate(matrix): # row만 꺼내주면 됨
-        for j, col in enumerate(column):
-            v = sum([row[_] * col[_] for _ in range(len(row))])
-            stored_matrix[i][j], squared_matrix[i][j] = v, v
-    print(squared_matrix)
-    matrix = squared_matrix
-    b -= 1
 
-# 행렬 곱 구현하기
-# while b:
-# for i, row in enumerate(matrix):
-#     for j in range(len(matrix)):
-#         col = [r[j] for r in matrix]
-#         v = sum([row[_] * col[_] for _ in range(len(row))])
-#         stored_matrix[i][j], squared_matrix[i][j] = v, v
-# print(squared_matrix)
-# b -= 1
+def pow_matrix(matrix, B):
+    """
+    행렬 matrix를 B 제곱하는 함수
+    """
+    if B == 1:
+        return [[element % 1000 for element in row] for row in matrix]
+
+    if B == 2:
+        return multiply_matrix(matrix, matrix)
+
+    if B % 2 == 0:
+        matrix = pow_matrix(pow_matrix(matrix, B//2), 2)
+    else:
+        matrix = multiply_matrix(pow_matrix(
+            pow_matrix(matrix, B//2), 2), matrix)
+    return matrix
+
+
+N, B = map(int, input().split())
+matrix = []
+
+for _ in range(N):
+    matrix.append(list(map(int, input().split())))
+
+result = pow_matrix(matrix, B)
+
+for row in result:
+    print(' '.join(map(str, row)))
