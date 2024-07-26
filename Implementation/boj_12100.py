@@ -12,25 +12,43 @@ dy = (-1, 0, 1, 0)
 dx = (0, 1, 0, -1)
 
 
-def move(board, direction):
-    y_start, x_start = 0, 0
+def move(board, merged, direction, y, x):
+    if board[y][x] == 0:  # 옮길게 없음
+        return board, merged
+    ny, nx = y, x
+    while True:
+        ny += dy[direction]
+        nx += dx[direction]
+        if ny < 0 or nx < 0 or ny >= n or nx >= n:
+            break
+        elif board[ny][nx] == board[y][x] and not merged[ny][nx]:  # 합쳐짐
+            board[ny][nx] += board[y][x]
+            board[y][x] = 0
+            merged[ny][nx] = True
+            break
+        elif board[ny][nx] == 0:  # 옮겨감
+            board[ny][nx] = board[y][x]
+            board[y][x] = 0
+            y, x = ny, nx
+        elif board[ny][nx] != board[y][x]:
+            break
+    return board, merged
+
+
+def discover(board, direction):
+    merged = [[False] * n for _ in range(n)]
     if direction == 0 or direction == 3:
-        y_start, x_start, y_d, x_d, s = 0, 0, 1, 1, n
+        for y in range(n):
+            for x in range(n):
+                board, merged = move(board, merged, direction, y, x)
     elif direction == 1:
-        y_start, x_start, y_d, x_d, s = 0, n - 1, 1, -1, n - 2
+        for y in range(0, n):
+            for x in range(n - 1, -1, -1):
+                board, merged = move(board, merged, direction, y, x)
     elif direction == 2:
-        y_start, x_start, y_d, x_d, s = n - 1, 0, -1, 1, n - 2
-    for y in range(y_start, s - y_start, y_d):
-        for x in range(x_start, s - x_start, x_d):
-            ny, nx = y + dy[direction], x + dx[direction]  # 옮겨지거나 합쳐질 위치
-            if ny < 0 or nx < 0 or ny >= n or nx >= n:
-                continue
-            elif board[ny][nx] == board[y][x]:  # 합쳐짐
-                board[ny][nx] += board[y][x]
-                board[y][x] = 0
-            elif board[ny][nx] == 0:  # 옮겨감
-                board[ny][nx] = board[y][x]
-                board[y][x] = 0
+        for y in range(n - 1, -1, -1):
+            for x in range(n):
+                board, merged = move(board, merged, direction, y, x)
 
 
 def dfs(board, depth):
@@ -41,13 +59,13 @@ def dfs(board, depth):
         return
     for direction in range(4):
         tmp = deepcopy(board)
-        move(tmp, direction)
-        print(f"depth: {depth}, direction: {direction}")
-        for i in range(n):
-            print(tmp[i])
-        print()
-        if depth == 1:
-            break
+        discover(tmp, direction)
+        # print(f"depth: {depth}, direction: {direction}")
+        # for i in range(n):
+        #     print(tmp[i])
+        # print()
+        # if depth == 1:
+        #     break
         dfs(tmp, depth + 1)
         tmp = deepcopy(board)
 
