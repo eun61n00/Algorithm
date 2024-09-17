@@ -8,6 +8,7 @@
 <details><summary>Graph</summary>
 
 <details><summary>Graph/BFS</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                   | Level                                                        | URL                                                                         | Date         |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -42,9 +43,11 @@
 | [Programmers 미로 탈출](https://github.com/eun61n00/Algorithm/blob/main/Graph/BFS/programmers_미로_탈출.py)               | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/159993</sub> | Oct 19, 2023 |
 | [BOJ #21609 상어중학교](https://github.com/eun61n00/Algorithm/blob/main/Graph/BFS/boj_21609.py)                           | ![Static Badge](https://img.shields.io/badge/Gold2-E09E37)   | <sub>https://www.acmicpc.net/problem/21609</sub>                            | Apr 10, 2024 |
 
+</div>
 </details>
 
 <details><summary>Graph/DFS</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                   | Level                                                        | URL                                                                        | Date         |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------ |
@@ -62,17 +65,21 @@
 | [BOJ #17142 연구실3](https://github.com/eun61n00/Algorithm/blob/main/Graph/DFS/boj_17142.py)                              | ![Static Badge](https://img.shields.io/badge/Gold3-E09E37)   | <sub>https://www.acmicpc.net/problem/17142</sub>                           | Apr 10, 2024 |
 | [DFS로 Combination 구현하기](https://github.com/eun61n00/Algorithm/blob/main/Graph/DFS/combinations.py)                   | -                                                            | -                                                                          | Apr 10, 2024 |
 
+</div>
 </details>
 
 <details><summary>Graph/MST</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                               | Level                                                      | URL                                              | Date         |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------ | ------------ |
 | [❌ BOJ #17472 다리 만들기 2](https://github.com/eun61n00/Algorithm/blob/main/Graph/MST/boj_17472.py) | ![Static Badge](https://img.shields.io/badge/Gold1-E09E37) | <sub>https://www.acmicpc.net/problem/17472</sub> | Mar 16, 2023 |
 
+</div>
 </details>
 
 <details><summary>Graph/Shortest-Path</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                     | Level                                                      | URL                                              | Date         |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------ | ------------ |
@@ -88,9 +95,11 @@
 | [❌ BOJ #21278 호석이 두 마리 치킨](https://github.com/eun61n00/Algorithm/blob/main/Graph/Shortest-Path/boj_21278.py)                       | ![Static Badge](https://img.shields.io/badge/Gold5-E09E37) | <sub>https://www.acmicpc.net/problem/21278</sub> | Jan 27, 2023 |
 | [Floyd-warshall 알고리즘 개념](https://github.com/eun61n00/Algorithm/blob/main/Graph/Shortest-Path/floyd_warshall.py)                       | -                                                          | -                                                | Jan 27, 2023 |
 
+</div>
 </details>
 
 <details><summary>Graph/Union-Find</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                    | Level                                                      | URL                                             | Date         |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------- | ------------ |
@@ -98,20 +107,24 @@
 | [BOJ #1976 여행 가자](https://github.com/eun61n00/Algorithm/blob/main/Graph/Union-Find/boj_1976.py)        | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37) | <sub>https://www.acmicpc.net/problem/1976</sub> | Jul 5, 2022  |
 | [BOJ #1717 집합의 표현](https://github.com/eun61n00/Algorithm/blob/main/Two-Pointer/boj_1717.py)           | ![Static Badge](https://img.shields.io/badge/Gold5-E09E37) | <sub>https://www.acmicpc.net/problem/1717</sub> | Sep 2, 2024  |
 
+</div>
 </details>
 
 <details><summary>Graph/Topological-Sort</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                   | Level                                                          | URL                                             | Date         |
 | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------- | ------------ |
 | [BOJ #2252 줄 세우기](https://github.com/eun61n00/Algorithm/blob/main/Graph/Topological-Sort/boj_2252.py) | ![Static Badge](https://img.shields.io/badge/Gold3-E09E37)     | <sub>https://www.acmicpc.net/problem/2252</sub> | Feb 22, 2023 |
 | [❌ BOJ #4196 도미노](https://github.com/eun61n00/Algorithm/blob/main/Greedy/boj_4196.py)                 | ![Static Badge](https://img.shields.io/badge/Platinum4-6DDFA8) | <sub>https://www.acmicpc.net/problem/4196</sub> | Mar 1, 2023  |
 
+</div>
 </details>
 
 </details>
 
 <details><summary>Implementation</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                           | Level                                                        | URL                                                                                                             | Date         |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -171,7 +184,9 @@
 | [Programmers 이웃한 칸](https://github.com/eun61n00/Algorithm/blob/main/Implementation/programmers_이웃한칸.py)                   | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/250125</sub>                                     | Oct 19, 2023 |
 | [BOJ #1205 등수 구하기](https://github.com/eun61n00/Algorithm/blob/main/Implementation/boj_1205.py)                               | ![Static Badge](https://img.shields.io/badge/Silver4-E09E37) | <sub>https://www.acmicpc.net/problem/1205</sub>                                                                 | Aug 4, 2024  |
 
+</div>
 <details><summary>Implementation/Simulation</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                             | Level                                                      | URL                                                                         | Date         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------- | ------------ |
@@ -183,11 +198,13 @@
 | [Programmers 붕대 감기](https://github.com/eun61n00/Algorithm/blob/main/Implementation/Simulation/programmers_붕대감기.py)          | ![Static Badge](https://img.shields.io/badge/Lv1-57B7F9)   | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/250137</sub> | Feb 15, 2024 |
 | [BOJ #14891 톱니바퀴](https://github.com/eun61n00/Algorithm/blob/main/Implementation/Simulation/boj_14891.py)                       | ![Static Badge](https://img.shields.io/badge/Gold5-E09E37) | <sub>https://www.acmicpc.net/problem/14891</sub>                            | Oct 19, 2023 |
 
+</div>
 </details>
 
 </details>
 
 <details><summary>String</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                              | Level                                                        | URL                                                                         | Date         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -209,9 +226,11 @@
 | [Programmers 인덱스 바꾸기](https://github.com/eun61n00/Algorithm/blob/main/Implementation/programmers_인덱스바꾸기.py)              | ![Static Badge](https://img.shields.io/badge/Lv0-488F7A)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/120895</sub> | Jun 15, 2023 |
 | [Programmers 자릿수 더하기](https://github.com/eun61n00/Algorithm/blob/main/Implementation/programmers_자릿수더하기.py)              | ![Static Badge](https://img.shields.io/badge/Lv1-57B7F9)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/12931</sub>  | Jun 15, 2023 |
 
+</div>
 </details>
 
 <details><summary>Mathematics</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                          | Level                                                        | URL                                                                         | Date         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -230,9 +249,11 @@
 | [Programmers 당구 연습](https://github.com/eun61n00/Algorithm/blob/main/Implementation/programmers_당구_연습.py) | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/169198</sub> | Oct 7, 2023  |
 | [BOJ #13458 시험 감독](https://github.com/eun61n00/Algorithm/blob/main/Mathematics/boj_13458.py)                 | ![Static Badge](https://img.shields.io/badge/Bronze2-A64A14) | <sub>https://www.acmicpc.net/problem/13458</sub>                            | Oct 19, 2023 |
 
+</div>
 </details>
 
 <details><summary>Brute Force</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                             | Level                                                        | URL                                                                                                             | Date         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -250,7 +271,9 @@
 | [Programmers 카펫](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/programmers_카펫.py)                                 | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/42842</sub>                                      | Sep 28, 2023 |
 | [❌ BOJ #14500 테트로미노](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/boj_14500.py)                                | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | <sub>https://www.acmicpc.net/problem/14500</sub>                                                                | Oct 19, 2023 |
 
+</div>
 <details><summary>Brute-Force/Back-Tracking</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                              | Level                                                        | URL                                              | Date         |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ | ------------ |
@@ -275,11 +298,13 @@
 | [❌ BOJ #12100 2048 (Easy)](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/Back-Tracking/boj_12100.py)  | ![Static Badge](https://img.shields.io/badge/Gold1-E09E37)   | <sub>https://www.acmicpc.net/problem/12100</sub> | Apr 13, 2024 |
 | [❌ BOJ #15684 사다리 조작](https://github.com/eun61n00/Algorithm/blob/main/Implementation/boj_15684.py)             | ![Static Badge](https://img.shields.io/badge/Gold3-E09E37)   | <sub>https://www.acmicpc.net/problem/15684</sub> | Aug 2,2024   |
 
+</div>
 </details>
 
 </details>
 
 <details><summary>Dynamic Programming</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                   | Level                                                        | URL                                                                                                             | Date         |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -307,9 +332,11 @@
 | [BOJ #2758 로또](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_2758.c)                          | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | <sub>https://www.acmicpc.net/problem/2758</sub>                                                                 | Oct 15, 2023 |
 | [BOJ #1780 종이의 개수](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_1780.py)                  | ![Static Badge](https://img.shields.io/badge/Silver2-495278) | <sub>https://www.acmicpc.net/problem/1780</sub>                                                                 | Apr 11, 2024 |
 
+</div>
 </details>
 
 <details><summary>Sorting</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                     | Level                                                        | URL                                                                        | Date         |
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------ |
@@ -328,11 +355,13 @@
 | [이것이 코딩 테스트다 Ch6 퀵 정렬](https://github.com/eun61n00/Algorithm/blob/main/Sorting/tct_6_4.py)                      | -                                                            | -                                                                          | Mar 12, 2023 |
 | [이것이 코딩 테스트다 Ch6 파이썬의 장점을 살린 퀵 정렬](https://github.com/eun61n00/Algorithm/blob/main/Sorting/tct_6_5.py) | -                                                            | -                                                                          | Mar 12, 2023 |
 
+</div>
 </details>
 
 <details><summary>Data-Structure</summary>
 
 <details><summary>Data-Structure/Heap</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                          | Level                                                        | URL                                                                        | Date         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------ |
@@ -345,9 +374,11 @@
 | [BOJ #1202 보석 도둑](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Heap/boj_1202.py)                           | ![Static Badge](https://img.shields.io/badge/Gold2-E09E37)   | <sub>https://www.acmicpc.net/problem/1202</sub>                            | Jan 27, 2023 |
 | [Programmers 디스크 컨트롤러](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Heap/programmers_디스크컨트롤러.py) | ![Static Badge](https://img.shields.io/badge/Lv3-E09E37)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/42627</sub> | Feb 10, 2023 |
 
+</div>
 </details>
 
 <details><summary>Data-Structure/Queue</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                    | Level                                                        | URL                                                                         | Date         |
 | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -359,9 +390,11 @@
 | [Programmers 주식 가격](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Queue/programmers_주식가격.py)                      | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/42584</sub>  | Feb 10, 2023 |
 | [BOJ #5430 AC](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Queue/boj_5430.py)                                           | ![Static Badge](https://img.shields.io/badge/Gold5-E09E37)   | <sub>https://www.acmicpc.net/problem/5430</sub>                             | Aug 3, 2024  |
 
+</div>
 </details>
 
 <details><summary>Data-Structure/Stack</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                      | Level                                                        | URL                                                                         | Date         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -376,9 +409,11 @@
 | [Programmers 뒤에 있는 큰 수 찾기](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Stack/programmers_뒤에_있는_큰_수_찾기.py) | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/154539</sub> | Oct 20, 2023 |
 | [BOJ #6198 옥상 정원 꾸미기](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Stack/boj_6198.py)                               | ![Static Badge](https://img.shields.io/badge/Gold5-E09E37)   | <sub>https://www.acmicpc.net/problem/6198</sub>                             | Apr 6, 2024  |
 
+</div>
 </details>
 
 <details><summary>Data-Structure/Hash</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                               | Level                                                        | URL                                                                        | Date         |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------ |
@@ -389,11 +424,13 @@
 | [Programmers 전화번호 목록](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Hash/programmers_베스트앨범.py)            | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/42577</sub> | Aug 31, 2022 |
 | [BOJ #10816 숫자 카드 2](https://github.com/eun61n00/Algorithm/blob/main/Data-Structure/Hash/boj_10816.py)                            | ![Static Badge](https://img.shields.io/badge/Silver4-E09E37) | <sub>https://www.acmicpc.net/problem/10816</sub>                           | Aug 3, 2024  |
 
+</div>
 </details>
 
 </details>
 
 <details><summary>Divide-And-Conquer</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                  | Level                                                        | URL                                              | Date         |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ | ------------ |
@@ -402,7 +439,9 @@
 | [BOJ #1629 곱셈](https://github.com/eun61n00/Algorithm/blob/main/Divide-And-Conquer/boj_1629.py)         | ![Static Badge](https://img.shields.io/badge/Silver1-495278) | <sub>https://www.acmicpc.net/problem/1629</sub>  | Sep 30, 2023 |
 | [BOJ #10830 행렬 제곱](https://github.com/eun61n00/Algorithm/blob/main/Divide-And-Conquer/boj_10830.py)  | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | <sub>https://www.acmicpc.net/problem/10830</sub> | Aug 2, 2024  |
 
+</div>
 <details><summary>Divide-And-Conquer/Binary-Search</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                                    | Level                                                        | URL                                             | Date         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------- | ------------ |
@@ -418,11 +457,13 @@
 | [BOJ #1450 냅색문제](https://github.com/eun61n00/Algorithm/blob/main/Divide-And-Conquer/Binary-Search/boj_1450.py)                                         | ![Static Badge](https://img.shields.io/badge/Gold1-E09E37)   | <sub>https://www.acmicpc.net/problem/1450</sub> | Feb 27, 2023 |
 | [BOJ #2110 공유기 설치](https://github.com/eun61n00/Algorithm/blob/main/Divide-And-Conquer/Binary-Search/boj_2110.py)                                      | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | <sub>https://www.acmicpc.net/problem/2110</sub> | Feb 27, 2023 |
 
+</div>
 </details>
 
 </details>
 
 <details><summary>Greedy</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                        | Level                                                        | URL                                                                         | Date         |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -443,9 +484,11 @@
 | [Programmers 덧칠하기](https://github.com/eun61n00/Algorithm/blob/main/Greedy/programmers_덧칠하기.py)                         | ![Static Badge](https://img.shields.io/badge/Lv1-57B7F9)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/161989</sub> | Mar 24, 2024 |
 | [Boj #13305 주유소](https://github.com/eun61n00/Algorithm/blob/main/Greedy/boj_13305.py)                                       | ![Static Badge](https://img.shields.io/badge/Silver3-495278) | <sub>https://www.acmicpc.net/problem/13305</sub>                            | Aug 4, 2024  |
 
+</div>
 </details>
 
 <details><summary>Two Pointer</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                  | Level                                                        | URL                                                                         | Date         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------ |
@@ -457,9 +500,11 @@
 | [Programmers 연속된 부분 수열의 합](https://github.com/eun61n00/Algorithm/blob/main/Implementation/programmers_연속된_부분_수열의_합.py) | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | <sub>https://school.programmers.co.kr/learn/courses/30/lessons/178870</sub> | Oct 7, 2023  |
 | [BOJ #2531 회전 초밥](https://github.com/eun61n00/Algorithm/blob/main/Two-Pointer/boj_2531.py)                                           | ![Static Badge](https://img.shields.io/badge/Silver1-495278) | <sub>https://www.acmicpc.net/problem/2531</sub>                             | Sep 2, 2024  |
 
+</div>
 </details>
 
 <details><summary>Recursion</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                  | Level                                                        | URL                                              | Date         |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ | ------------ |
@@ -468,9 +513,11 @@
 | [❌ BOJ #18511 큰 수 구성하기](https://github.com/eun61n00/Algorithm/blob/main/Recursion/boj_18511.py)   | ![Static Badge](https://img.shields.io/badge/Silver5-495278) | <sub>https://www.acmicpc.net/problem/18511</sub> | Sep 30, 2023 |
 | [BOJ #25501 재귀의 귀재](https://github.com/eun61n00/Algorithm/blob/main/Recursion/boj_25501.py)         | ![Static Badge](https://img.shields.io/badge/Bronze2-A64A14) | <sub>https://www.acmicpc.net/problem/25501</sub> | Sep 30, 2023 |
 
+</div>
 </details>
 
 <details><summary>SQL</summary>
+<div style="overflow-x: auto;">
 
 | Problem                                                                                                                                                                                | Level                                                    | URL                                                                         | Date         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------- | ------------ |
@@ -489,4 +536,5 @@
 | [Programmers 고득점 kit - SUM MAX MIN](https://github.com/eun61n00/Algorithm/blob/main/SQL/programmers_SQL_고득점kit_sum_max_min.sql)                                                  | -                                                        | <sub>https://school.programmers.co.kr/learn/courses/30/parts/17043</sub>    | Feb 17, 2023 |
 | [Programmers 고득점 kit - String](https://github.com/eun61n00/Algorithm/blob/main/SQL/programmers_SQL_고득점kit_string.sql)                                                            | -                                                        | <sub>https://school.programmers.co.kr/learn/courses/30/parts/17047</sub>    | Feb 23, 2023 |
 
+</div>
 </details>
