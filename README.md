@@ -247,7 +247,7 @@
 | <sub>[Programmers PCCP 체육대회](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/programmers_PCCP_1_2.py)                    | -                                                            | [🔗](https://programmers.co.kr/app/with_setting/tests/131573/challenges/algorithms/12906?language=python3) | <sub>Aug 28, 2023 |
 | <sub>[Programmers 전력망을 둘로 나누기](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/programmers_전력망을_둘로_나누기.py) | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | [🔗](https://school.programmers.co.kr/learn/courses/30/lessons/86971)                                      | <sub>Sep 28, 2023 |
 | <sub>[Programmers 카펫](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/programmers_카펫.py)                                 | ![Static Badge](https://img.shields.io/badge/Lv2-6EC55D)     | [🔗](https://school.programmers.co.kr/learn/courses/30/lessons/42842)                                      | <sub>Sep 28, 2023 |
-| <sub>[❌ BOJ #14500 테트로미노](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/boj_14500.py)                                | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | [🔗](https://www.acmicpc.net/problem/14500)                                                                | <sub>Oct 19, 2023 |
+| <sub>[BOJ #14500 테트로미노](https://github.com/eun61n00/Algorithm/blob/main/Brute-Force/boj_14500.py)                                   | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | [🔗](https://www.acmicpc.net/problem/14500)                                                                | <sub>Oct 29, 2024 |
 
 <details><summary>Brute-Force/Back-Tracking</summary>
 
