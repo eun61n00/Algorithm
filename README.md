@@ -3,6 +3,16 @@
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/generate_badge?boj=eun61n)](https://solved.ac/eun61n)
 
+### 📌 Commit message Types
+
+| TYPE            | Description                                  |
+| --------------- | -------------------------------------------- |
+| **✅ SOLVED**   | Solve a new problem                          |
+| **📝 DOCS**     | Documentation changes (e.g., README file)    |
+| **🎀 STYLE**    | Code formatting (no code logic changes)      |
+| **♻️ REFACTOR** | Refactor code without changing functionality |
+| **🔧 CHORE**    | Miscellaneous tasks                          |
+
 ### 📌 Problem Lists
 
 <details><summary>Graph</summary>
