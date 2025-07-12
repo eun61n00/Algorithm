@@ -315,6 +315,7 @@
 | <sub>[BOJ #12852 1로 만들기 2](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_12852.py)               | ![Static Badge](https://img.shields.io/badge/Silver1-495278) | [🔗](https://www.acmicpc.net/problem/12852)                                                                | <sub>Oct 15, 2023 |
 | <sub>[BOJ #2758 로또](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_2758.c)                          | ![Static Badge](https://img.shields.io/badge/Gold4-E09E37)   | [🔗](https://www.acmicpc.net/problem/2758)                                                                 | <sub>Oct 15, 2023 |
 | <sub>[BOJ #1780 종이의 개수](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_1780.py)                  | ![Static Badge](https://img.shields.io/badge/Silver2-495278) | [🔗](https://www.acmicpc.net/problem/1780)                                                                 | <sub>Apr 11, 2024 |
+| <sub>[BOJ #1149 RGB](https://github.com/eun61n00/Algorithm/blob/main/Dynamic-Programming/boj_1149.py)                          | ![Static Badge](https://img.shields.io/badge/Silver1-495278) | [🔗](https://www.acmicpc.net/problem/1149)                                                                 | <sub>Jul 12, 2025 |
 
 </details>
 
