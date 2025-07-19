@@ -452,6 +452,7 @@
 | <sub>[BOJ #2217 로프](https://github.com/eun61n00/Algorithm/blob/main/Greedy/boj_2217.py)                                           | ![Static Badge](https://img.shields.io/badge/Silver4-495278) | [🔗](https://www.acmicpc.net/problem/2217)                             | <sub>Oct 15, 2023 |
 | <sub>[Programmers 덧칠하기](https://github.com/eun61n00/Algorithm/blob/main/Greedy/programmers_덧칠하기.py)                         | ![Static Badge](https://img.shields.io/badge/Lv1-57B7F9)     | [🔗](https://school.programmers.co.kr/learn/courses/30/lessons/161989) | <sub>Mar 24, 2024 |
 | <sub>[Boj #13305 주유소](https://github.com/eun61n00/Algorithm/blob/main/Greedy/boj_13305.py)                                       | ![Static Badge](https://img.shields.io/badge/Silver3-495278) | [🔗](https://www.acmicpc.net/problem/13305)                            | <sub>Aug 4, 2024  |
+| <sub>[Boj #2457 공주님의 정원](https://github.com/eun61n00/Algorithm/blob/main/Greedy/boj_2457.py)                                  | ![Static Badge](https://img.shields.io/badge/Gold3-E09E37)   | [🔗](https://www.acmicpc.net/problem/2457)                             | <sub>Jul 19, 2025 |
 
 </details>
 
